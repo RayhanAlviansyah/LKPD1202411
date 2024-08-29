@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <style>
+        #gambar-ubah {
+            width: 200px;
+            height: 200px;
+            border: 5px solid #ccc;
+            transition: border-color 0.3s, clip-path 0.3s;
+        }
+        .lingkaran {
+            border-radius: 50%;
+        }
+        .kotak {
+            border-radius: 0;
+        }
+        .segitiga {
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+        .segitiga {
+            -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body>
+    <select id="gambar">
+        <option value="gambar1">Gambar 1</option>
+        <option value="gambar2">Gambar 2</option>
+        <option value="gambar3">Gambar 3</option>
+    </select>
+    <select id="bentuk">
+        <option value="lingkaran">Lingkaran</option>
+        <option value="kotak">Kotak</option>
+        <option value="segitiga">Segitiga</option>
+    </select>
+    <select id="warna-border">
+        <option value="merah">Merah</option>
+        <option value="kuning">Kuning</option>
+        <option value="hijau">Hijau</option>
+    </select>
+    <button id="kirim">Kirim</button>
+    <img id="gambar-ubah" src="https://picsum.photos/200/300" alt="Gambar yang dapat diubah">
+
+    <script>
+        const gambar = document.getElementById('gambar');
+        const bentuk = document.getElementById('bentuk');
+        const warnaBorder = document.getElementById('warna-border');
+        const kirim = document.getElementById('kirim');
+        const gambarUbah = document.getElementById('gambar-ubah');
+
+        const imageSources = {
+            'gambar1': 'https://i.pinimg.com/564x/8c/0c/e1/8c0ce1f02fcc6c92e6c4f6b146e6ff1c.jpg',
+            'gambar2': 'https://i.pinimg.com/564x/3c/fa/5c/3cfa5cc6e89d520fbe4a0855ee68d3fc.jpg',
+            'gambar3': 'https://i.pinimg.com/564x/d6/b6/31/d6b6312d3e12de737b48b11d6c271aec.jpg'
+        };
+
+        kirim.addEventListener('click', function() {
+            gambarUbah.src = imageSources[gambar.value];
+            
+            gambarUbah.classList.remove('lingkaran', 'kotak', 'segitiga');
+            gambarUbah.classList.add(bentuk.value);
+
+            switch (warnaBorder.value) {
+                case 'merah':
+                    gambarUbah.style.borderColor = '#ff0000';
+                    break;
+                case 'kuning':
+                    gambarUbah.style.borderColor = '#ffff00';
+                    break;
+                case 'hijau':
+                    gambarUbah.style.borderColor = '#00ff00';
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Cafe</title>
+    <style>
+.navbar {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a:hover {
+    background-color: #555;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.navbar img {
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.navbar img:hover {
+    transform: scale(1.1);
+}
+
+.produk1, .produk2, .produk3 {
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0px -100px 50px rgba(0, 0, 0, 0.3);
+}
+
+.deskripsi {
+    padding: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px;
+    animation: fadeInUp 2s ease;
+}
+
+button {
+    background-color: #f2f2f2;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #333;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.icon p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(97, 97, 97, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon img {
+    margin-left: 10px;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .navbar img {
+            padding: 10px 20px;
+            height:100px ;
+            width:100px ;
+        }
+
+        p {
+            border-radius:20px;
+            text-align: center;
+            padding-top: 20px;
+            background-color: greenyellow;
+            height:50px;
+            width: 150px;
+        }
+        p img {
+            height: 20px;
+            width: 20px;
+        }
+
+        .produk1 {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            background-image:url(img/americano.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 700px;
+            width: 100%;
+        }
+
+        .produk2 {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            background-image:url(img/cappucino.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 700px;
+            width: 100%;
+        }
+
+        .produk3 {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            background-image:url(img/kopi_susu.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 700px;
+            width: 100%;
+        }
+
+        .deskripsi {
+            background-color: #f2f2f23f;
+        }
+
+        button {
+            border-radius: 10px;
+            height: 30px;
+            width: 140px;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div><img src="img/Logo.jpg" alt=""></div>
+    <a href="home">Menu</a>
+    <a href="about">About</a>
+    <a href="contact">Contact</a>
+</div>
+
+<div class="produk1">
+    <div class="deskripsi">
+    <h1>Americano</h1>
+    <h4>Americano memiliki rasa yang lebih ringan daripada espresso karena banyak dicampur dengan air. Biasanya, Americano dinikmati tanpa gula atau pemanis lainnya, sehingga rasanya cenderung pahit.</h4>
+    <div class="icon">
+        <p>Total Pembelian : 300/day</p>
+            <p><img src="img/icon1.png" alt="">2000</p>
+            <a href="https://id.wikipedia.org/wiki/Caff%C3%A8_Americano"><button>Read More</button></a>
+            
+        </div>
+    </div>
+</div>
+<div class="produk2">
+    <div class="deskripsi">
+        <h1>cappucino</h1>
+        <h4>Rasanya manis dan kaya, dan rasa kopi masih kuat meskipun sudah dicampur susu.</h4>
+        <div class="icon">
+            <p>Total Pembelian : 400/day</p>
+                <p><img src="img/icon1.png" alt="">1500</p>
+                <a href="https://id.wikipedia.org/wiki/Kapucino"><button>Read More</button></a>
+                
+            </div>
+        </div>
+</div>
+<div class="produk3">
+    <div class="deskripsi">
+        <h1>Kopi Susu</h1>
+        <h4>minuman yang dibuat dengan mencampur kopi dan susu, dan biasanya disajikan dengan gula aren. Kopi susu bisa dibuat dengan cara tradisional atau oleh barista di kedai kopi.</h4>
+        <div class="icon">
+            <p>Total Pembelian : 500/day</p>
+                <p><img src="img/icon1.png" alt="">3568</p>
+                <a href="https://id.wikipedia.org/wiki/Kopi_susu#:~:text=Kopi%20susu%20adalah%20sebuah%20minuman,minuman%20resmi%20di%20Rhode%20Island."><button>Read More</button></a>
+                
+            </div>
+        </div>
+</div>
+
+</body>
+</html>

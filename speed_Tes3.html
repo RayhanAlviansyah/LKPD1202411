@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>Ada Perekomendasi?</p>
+        <select name="pilih" id="pilih" onchange="changeLabel(this)">
+            <option disabled hidden selected>Pilih</option>
+            <option value="ada">Ada</option>
+            <option value="tidak">Tidak Ada</option>
+        </select>
+        <div id="input_perekomen">
+            <label for=""> Nama Perekomendasi</label>
+            <input type="text" name="nama" id="nama">
+        </div>
+        <div id="rekomendasi">
+            <p>kategori perekomendasi</p>
+            <select name="pilih2" id="pilih2" onchange="changeLabel1(this)">
+                <option disabled hidden selected>Pilih</option>
+                <option value="pekerja_bri">Pekerja BRI</option>
+                <option value="purnabakti">Purnabakti</option>
+            </select>
+            <label for="" id="pilih2"> Nomor ID Pegawai/KTA/PN/MP</label>
+            <input type="text" name="id" id="id">
+            <div id="jabatan">
+                <label for=""> Jabatan Perekomendasi</label>
+                <input type="text" name="name" id="name">
+            </div>
+        </div>
+    </form>
+    <script>
+        function changeLabel (e) {
+            let inputPerekomen = document.getElementById("input_perekomen");
+            let jab = document.getElementById ("rekomendasi");
+            if (e.value == "ada") {
+                inputPerekomen.style.display = "block";
+                jab.style.display = "block";
+            }else if (e.value == "tidak"){
+                inputPerekomen.style.display = "none";
+                jab.style.display = "none";
+            }
+        }
+        function changeLabel1 (e) {
+            let jabatan = document.getElementById("jabatan");
+            if (e.value == "pekerja_bri") {
+                jabatan.style.display = "block";
+            }else {
+                jabatan.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
